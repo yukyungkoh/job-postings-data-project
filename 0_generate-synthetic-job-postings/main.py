@@ -11,19 +11,24 @@ import aiohttp
 # ----------------------------
 OPENAI_API_KEY = "(your API here!)"
 
-# ----------------------------
-# 2. Define number of postings
-# ----------------------------
-n_posting = 10000
+# ---------------------------------------------------
+# 2. Define number of postings, trial number, etc.
+# ---------------------------------------------------
+n_trial = 1
+    # Due to OpenAI's daily request limits, it's not feasible to generate a large dataset
+    # (e.g., 100,000 postings) in a single run. Instead, this script is executed daily
+    # to generate a batch of 20,000 job postings at a time.
+
+n_posting = 20000
 
 # ----------------------------
 # 3. Generate job sectors
 # ----------------------------
 sectors = [
     "data science", "software engineering",
-    "marketing", "finance", "legal", "sales",
-    "healthcare", "education",
-    "hospitality", "public sector", "retail"
+    "consulting", "marketing", "finance", "legal",
+    "sales", "healthcare", "education",
+    "public sector", "retail"
 ]
 
 # ----------------------------
@@ -69,7 +74,7 @@ def build_prompt(sector):
     return prompt.strip()
 
 # ----------------------------
-# 5. Async GPT call
+# 5. Async GPT call (Modified)
 # ----------------------------
 async def generate_posting(session, sector, retries=3):
     prompt = build_prompt(sector)
@@ -84,56 +89,54 @@ async def generate_posting(session, sector, retries=3):
             {"role": "user", "content": prompt}
         ],
         "temperature": round(random.uniform(0.5, 0.8), 2),
-        "max_tokens": 550,
+        "max_tokens": 600,
     }
 
     for attempt in range(retries):
         try:
             async with session.post("https://api.openai.com/v1/chat/completions", headers=headers, json=data) as response:
                 res = await response.json()
-
-                # Check if response contains choices
                 if "choices" in res and res["choices"]:
                     content = res["choices"][0]["message"]["content"].strip()
                     if "### Job Title" in content and "### Job Posting" in content:
                         parts = content.split("### Job Posting")
                         title = parts[0].replace("### Job Title", "").strip()
                         text = parts[1].strip()
-                        return title, text
+                        return title, text, sector
                 else:
                     print(f"⚠️ Invalid response (no 'choices'): {res}")
         except Exception as e:
             print(f"❌ Error on attempt {attempt + 1} for sector {sector}: {e}")
 
-        # Exponential backoff
         await asyncio.sleep(2 * (attempt + 1))
 
-    return None, None
+    return None, None, sector
 
 # ----------------------------
-# 6. Main async runner
+# 6. Main async runner (Modified)
 # ----------------------------
 async def main():
-    output_file = "../data/synthetic_job_postings.csv"
-    batch_size = 10  # Number of concurrent requests
-    await asyncio.sleep(3)  # Increase pause between batches
+    output_file = f"../data/synthetic_job_postings_{n_trial}.csv"
+    batch_size = 10
+    await asyncio.sleep(3)
 
     with open(output_file, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
-        writer.writerow(["job_title", "posting_text"])
+        writer.writerow(["job_title", "posting_text", "sector"])  # ← Added "sector"
 
         async with aiohttp.ClientSession() as session:
             for i in range(0, n_posting, batch_size):
                 current_batch = [random.choice(sectors) for _ in range(batch_size)]
                 tasks = [generate_posting(session, sector) for sector in current_batch]
                 results = await asyncio.gather(*tasks)
-                for j, (title, text) in enumerate(results):
+
+                for j, (title, text, sector) in enumerate(results):
                     if title and text:
-                        writer.writerow([title, text])
+                        writer.writerow([title, text, sector])  # ← Include sector
                         print(f"✅ {i + j + 1}/{n_posting} - {title}")
                     else:
                         print(f"⚠️ Skipped one due to error or formatting.")
-                await asyncio.sleep(1)  # Slight pause between batches
+                await asyncio.sleep(1)
 
 if __name__ == "__main__":
     asyncio.run(main())
