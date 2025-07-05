@@ -1,12 +1,11 @@
-# 🏷️ Part 1: Categorize Job Titles
+# Part 1: Categorize Job Titles
 
 This part of the project explores multiple approaches to classify job titles extracted from job postings into broader occupational categories. Accurate title classification is a key step in analyzing labor market patterns, skill demands, and exposure to automation or AI.
 
 I apply three different methods:
 
----
 
-## 1️⃣ Rule-Based Classification (Regex Matching)
+## 1: Rule-Based Classification (Regex Matching)
 
 This method relies on manually defined patterns (e.g., keywords or regular expressions) to assign job titles to categories such as "Data-related", "Software Development", or "Finance".
 
@@ -22,7 +21,7 @@ This method relies on manually defined patterns (e.g., keywords or regular expre
 
 ---
 
-## 2️⃣ Supervised Learning
+## 2: Supervised Learning
 
 I train machine learning classifiers (e.g., logistic regression, Naive Bayes) on labeled examples of job titles to predict categories.
 
@@ -38,7 +37,7 @@ I train machine learning classifiers (e.g., logistic regression, Naive Bayes) on
 
 ---
 
-## 3️⃣ Unsupervised Learning
+## 3: Unsupervised Learning
 
 I use clustering and topic modeling (e.g., k-means, LDA) to group similar job titles without predefined labels.
 
