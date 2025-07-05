@@ -25,7 +25,7 @@ This section focuses on extracting job skills and task descriptions from job pos
 - Sentence embeddings
 - Large language models (LLMs)
 
-[Browse the notebook folder for Part 2](https://github.com/yukyungkoh/job-postings-data-project/tree/main/2_extract-job-skills)
+[Browse the notebook folder for Part 2](https://github.com/yukyungkoh/job-postings-data-project/tree/main/2_extract-job-skills-and-tasks)
 
 ---
 
