@@ -3,19 +3,19 @@
 This folder contains code and documentation for generating large-scale **synthetic job posting data** using OpenAI's GPT-4o model. The goal is to simulate realistic job titles and descriptions across a wide range of industries, with variation in job content, seniority, formatting, and style — mimicking the richness and messiness of real-world job postings.
 
 
-### Why Generate Synthetic Job Postings?
+## Why Generate Synthetic Job Postings?
 
 * Accessing representative job posting data from platforms like LinkedIn is difficult due to strict licensing restrictions and proprietary limitations. 
 * In contrast, **synthetic** job postings generated using **large language models (LLMs)** are safe to use, fully customizable, and easily scalable -making them an ideal resource for learning and experimentation with job posting data.
 
-✅ Advantages:
+✅ **Advantages:**
 
 * Legal to use and share publicly
-* Scalable to as many postings as you want 
+* Scalable to as many postings as I want 
 * Customizable for various sectors, structures, or use cases
 * Useful for building and testing NLP pipelines and job classification models
 
-❌ Limitations:
+❌ **Limitations:**
 
 * Synthetic data — not suitable for labor market research or policy analysis
 * Requires API usage, which incurs generation **costs**
@@ -23,7 +23,7 @@ This folder contains code and documentation for generating large-scale **synthet
 * May contain repetitive or overly clean language
 * Lacks the noise, inconsistency, and variability of real-world postings
 
-### How I Generated Synthetic Job Postings
+## How I Generated Synthetic Job Postings
 
 I use OpenAI’s **GPT-4o-mini** to generate synthetic job postings that include several features that mimic real-world job postings:
 - **Diverse job sectors** (e.g. healthcare, tech, education, retail)
