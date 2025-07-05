@@ -2,6 +2,8 @@
 
 This part of the project explores multiple approaches to classify job titles extracted from job postings into broader occupational categories. Job title classification is a key step in analyzing the labor market. 
 
+While job category labels are known by design—assigned during the LLM-based generation of synthetic job postings ([details here](https://github.com/yukyungkoh/job-postings-data-project/tree/main/0_generate-synthetic-job-postings)) -- they are treated as unknown here to demonstrate how the classification techniques can be applied in practice. 
+
 I implement three different methods, each documented in a separate Jupyter notebook within this folder.
 
 ## 1: Rule-Based Classification (Regex Matching)
