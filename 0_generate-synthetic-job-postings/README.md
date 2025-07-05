@@ -1,6 +1,6 @@
 # Synthetic U.S. Job Posting Data Generation
 
-This folder contains code and documentation for generating large-scale **synthetic job posting data** using OpenAI's GPT-4o model. The goal is to simulate realistic job titles and descriptions across a wide range of industries, with variation in job content, seniority, formatting, and style — mimicking the richness and messiness of real-world job postings.
+This folder contains code and documentation for generating large-scale **synthetic job posting data** using OpenAI's **GPT-4o** model. The goal is to simulate realistic job titles and descriptions across a wide range of industries, with variation in job content, seniority, formatting, and style — mimicking the richness and messiness of real-world job postings.
 
 
 ## Why Generate Synthetic Job Postings?
