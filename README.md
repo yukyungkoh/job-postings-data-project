@@ -7,6 +7,8 @@ This repository contains a collection of Jupyter notebooks and scripts aimed at 
 
 The project is organized into the following parts:
 
+---
+
 ### 🔷 Part 1: Categorize Job Titles  
 This section explores multiple NLP approaches for classifying job titles into categories, including:
 - Rule-based methods
