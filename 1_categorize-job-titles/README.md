@@ -1,6 +1,6 @@
 # Part 1: Categorize Job Titles
 
-This part of the project explores multiple approaches to classify job titles extracted from job postings into broader occupational categories. Accurate title classification is a key step in analyzing labor market patterns, skill demands, and exposure to automation or AI.
+This part of the project explores multiple approaches to classify job titles extracted from job postings into broader occupational categories. Job title classification is a key step in analyzing labor market patterns, skill demands, and exposure to automation or AI.
 
 I apply three different methods:
 
