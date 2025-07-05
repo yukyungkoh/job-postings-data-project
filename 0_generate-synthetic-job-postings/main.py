@@ -10,6 +10,7 @@ import aiohttp
 # 1. Set up your API key
 # ----------------------------
 OPENAI_API_KEY = "(your API here!)"
+
 # ----------------------------
 # 2. Define number of postings
 # ----------------------------
