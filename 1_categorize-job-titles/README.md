@@ -26,11 +26,9 @@ I train machine learning classifiers (e.g., logistic regression, Naive Bayes) on
 **✅ Advantages:**
 - More flexible than rule-based approaches
 - Can generalize to unseen titles if trained well
-- Supports probabilistic classification
 
 **❌ Limitations:**
 - Requires labeled training data
-- Performance depends heavily on feature engineering
 - May struggle with rare or ambiguous titles
 
 ## 3: Unsupervised Learning
@@ -40,10 +38,8 @@ I use clustering and topic modeling (e.g., k-means, LDA) to group similar job ti
 **✅ Advantages:**
 - No need for labeled data
 - Can reveal latent structure or emerging job groups
-- Useful for exploratory analysis
 
 **❌ Limitations:**
-- Hard to validate without ground truth
 - Clusters may be noisy or hard to interpret
 - Results can be sensitive to preprocessing choices
 
