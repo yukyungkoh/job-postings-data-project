@@ -13,21 +13,21 @@ This section explores multiple NLP approaches for classifying job titles into ca
 - Supervised learning (e.g., logistic regression, Naive Bayes)
 - Unsupervised learning (e.g., k-means clustering, LDA topic modeling)
 
-👉 [Browse the notebook folder for Part 1](https://github.com/yukyungkoh/job-postings-data-project/tree/main/1_categorize-job-titles)
+[Browse the notebook folder for Part 1](https://github.com/yukyungkoh/job-postings-data-project/tree/main/1_categorize-job-titles)
 
 ---
 
 ### 🔷 Part 2: Extract Job Skills and Tasks  
 This section focuses on extracting job skills and task descriptions from job posting text using:
-- Keyword matching to a curated skill list (e.g., from Lightcast)
+- Keyword matching to a curated skill list (from Lightcast)
 - Sentence embeddings
 - Large language models (LLMs)
 
-👉 [Browse the notebook folder for Part 2](https://github.com/yukyungkoh/job-postings-data-project/tree/main/2_extract-job-skills)
+[Browse the notebook folder for Part 2](https://github.com/yukyungkoh/job-postings-data-project/tree/main/2_extract-job-skills)
 
 ---
 
 ### 🔷 Part 3: Measure AI Demand Exposure  
 This section estimates the **AI exposure** of job tasks—i.e., how susceptible the listed tasks in job postings are to automation or augmentation by AI tools. It builds on task-level extraction to compute AI relevance scores.
 
-👉 [Browse the notebook folder for Part 3](https://github.com/yukyungkoh/job-postings-data-project/tree/main/3_measure-AI-demand-exposure)
+[Browse the notebook folder for Part 3](https://github.com/yukyungkoh/job-postings-data-project/tree/main/3_measure-AI-demand-exposure)
