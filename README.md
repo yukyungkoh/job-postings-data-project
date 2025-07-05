@@ -31,3 +31,10 @@ This section focuses on extracting job skills and task descriptions from job pos
 This section estimates the **AI exposure** of job tasks—i.e., how susceptible the listed tasks in job postings are to automation or augmentation by AI tools. It builds on task-level extraction to compute AI relevance scores.
 
 [Browse the notebook folder for Part 3](https://github.com/yukyungkoh/job-postings-data-project/tree/main/3_measure-AI-demand-exposure)
+
+
+---
+
+**Author:** Yu Kyung Koh 
+
+**Last updated:** July 4, 2025
