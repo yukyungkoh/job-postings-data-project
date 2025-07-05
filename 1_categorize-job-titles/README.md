@@ -1,6 +1,6 @@
 # Part 1: Categorize Job Titles
 
-This part of the project explores multiple approaches to classify job titles extracted from job postings into broader occupational categories. Job title classification is a key step in analyzing labor market patterns, skill demands, and exposure to automation or AI.
+This part of the project explores multiple approaches to classify job titles extracted from job postings into broader occupational categories. Job title classification is a key step in analyzing the labor market. 
 
 I implement three different methods, each documented in a separate Jupyter notebook within this folder.
 
