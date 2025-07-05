@@ -1,29 +1,33 @@
 # Job Postings Data Project
 
-This repository contains a collection of Jupyter notebooks and scripts aimed at learning how to apply **natural language processing (NLP)** and **large language models (LLMs)** to extract structured insights from messy, unstructured **job postings**. Using a sample of ~100,000 LinkedIn job ads, the project explores methods for leveraging job posting data to study labor market dynamics in real time
+This repository contains a collection of Jupyter notebooks and scripts aimed at learning how to apply **natural language processing (NLP)** and **large language models (LLMs)** to extract structured insights from messy, unstructured **job postings**. Using a sample of ~100,000 LinkedIn job ads, the project explores methods for leveraging job posting data to study labor market dynamics in real time. 
 
 
 ## 📁 Project Structure
 
-This project is structured into following sections: 
+The project is organized into the following parts:
 
-### 🔷 Part 1: Categorize job titles 
-I explore various NLP methods to classify job titles into categories, including:
-* Rule-based approach
-* Supervised learning methods (e.g., logistic regression, Naive Bayes)
-* Unsupervised learning methods (e.g., k-means clustering and LDA)
-  
-Check out [here](https://github.com/yukyungkoh/job-postings-data-project/tree/main/1_categorize-job-titles). 
+### 🔷 Part 1: Categorize Job Titles  
+This section explores multiple NLP approaches for classifying job titles into categories, including:
+- Rule-based methods
+- Supervised learning (e.g., logistic regression, Naive Bayes)
+- Unsupervised learning (e.g., k-means clustering, LDA topic modeling)
 
-### 🔷 Part 2: Extract job skills and tasks
-I extract job skills and tasks from each job posting text using various approaches, including:
-* Matching to the list of job skills compiled by [Lightcast](https://lightcast.io/open-skills)
-* Sentence embeddings
-* LLM
+👉 [Browse the notebook folder for Part 1](https://github.com/yukyungkoh/job-postings-data-project/tree/main/1_categorize-job-titles)
 
-Check out [here](https://github.com/yukyungkoh/job-postings-data-project/tree/main/2_extract-job-skills)
+---
 
-### 🔷 Part 3: Measure AI demand exposure using extracted tasks 
-I measure AI demand exposure for each job task, how susceptible job tasks listed in new postings are to augmentation or replacement by AI
+### 🔷 Part 2: Extract Job Skills and Tasks  
+This section focuses on extracting job skills and task descriptions from job posting text using:
+- Keyword matching to a curated skill list (e.g., from Lightcast)
+- Sentence embeddings
+- Large language models (LLMs)
 
-Check out [here](https://github.com/yukyungkoh/job-postings-data-project/tree/main/3_measure-AI-demand-exposure)
+👉 [Browse the notebook folder for Part 2](https://github.com/yukyungkoh/job-postings-data-project/tree/main/2_extract-job-skills)
+
+---
+
+### 🔷 Part 3: Measure AI Demand Exposure  
+This section estimates the **AI exposure** of job tasks—i.e., how susceptible the listed tasks in job postings are to automation or augmentation by AI tools. It builds on task-level extraction to compute AI relevance scores.
+
+👉 [Browse the notebook folder for Part 3](https://github.com/yukyungkoh/job-postings-data-project/tree/main/3_measure-AI-demand-exposure)
