@@ -36,5 +36,4 @@ This section estimates the **AI exposure** of job tasks—i.e., how susceptible 
 ---
 
 **Author:** Yu Kyung Koh 
-
 **Last updated:** July 4, 2025
