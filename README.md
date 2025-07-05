@@ -1,9 +1,15 @@
 # Job Postings Data Project
 
-This repository contains a collection of Jupyter notebooks and scripts aimed at learning how to apply **natural language processing (NLP)** and **large language models (LLMs)** to extract structured insights from messy, unstructured **job postings**. Using a sample of 100,000+ job ads, the project explores methods for leveraging job posting data to study the labor market in real time. 
+This repository contains a collection of Jupyter notebooks and scripts aimed at learning how to apply **natural language processing (NLP)** and **large language models (LLMs)** to extract structured insights from messy, unstructured **job postings**. Using a sample of synthetic job posting, the project explores methods for leveraging job posting data to study the labor market. 
 
 
-The project is organized into the following parts:
+**Why Use Synthetic Job Postings?**
+
+- Access to real job posting data from platforms like LinkedIn is limited due to licensing restrictions and proprietary constraints.
+- **Synthetic job postings** generated with LLMs offer a practical alternative: they are safe to use, fully customizable, and scalable—making them ideal for experimentation and learning.
+- You can explore how I generated the synthetic data in [this folder](https://github.com/yukyungkoh/job-postings-data-project/tree/main/0_generate-synthetic-job-postings).
+
+The remainder of the project is organized into the following parts:
 
 ## 🔷 Part 1: Categorize Job Titles  
 This section explores multiple NLP approaches for classifying job titles into categories, including:
