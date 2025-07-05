@@ -19,8 +19,6 @@ This method relies on manually defined patterns (e.g., keywords or regular expre
 - Fragile to typos, variations, and edge cases
 - Requires manual tuning of rules
 
----
-
 ## 2: Supervised Learning
 
 I train machine learning classifiers (e.g., logistic regression, Naive Bayes) on labeled examples of job titles to predict categories.
@@ -34,8 +32,6 @@ I train machine learning classifiers (e.g., logistic regression, Naive Bayes) on
 - Requires labeled training data
 - Performance depends heavily on feature engineering
 - May struggle with rare or ambiguous titles
-
----
 
 ## 3: Unsupervised Learning
 
