@@ -2,7 +2,7 @@
 
 This part of the project explores multiple approaches to classify job titles extracted from job postings into broader occupational categories. Job title classification is a key step in analyzing labor market patterns, skill demands, and exposure to automation or AI.
 
-I implement three distinct methods, each documented in a separate Jupyter notebook within this folder.
+I implement three different methods, each documented in a separate Jupyter notebook within this folder.
 
 ## 1: Rule-Based Classification (Regex Matching)
 
