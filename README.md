@@ -13,8 +13,17 @@ I explore various NLP methods to classify job titles into categories, including:
 * Supervised learning methods (e.g., logistic regression, Naive Bayes)
 * Unsupervised learning methods (e.g., k-means clustering and LDA)
   
-Check out [here](https://github.com/yukyungkoh/job-postings-data-project/tree/main/1_categorize-job-titles)
+Check out [here](https://github.com/yukyungkoh/job-postings-data-project/tree/main/1_categorize-job-titles). 
 
-### 🔷 Part 2: Extract job skills 
+### 🔷 Part 2: Extract job skills and tasks
+I extract job skills and tasks from each job posting text using various approaches, including:
+* Matching to the list of job skills compiled by [Lightcast](https://lightcast.io/open-skills)
+* Sentence embeddings
+* LLM
+
+Check out [here](https://github.com/yukyungkoh/job-postings-data-project/tree/main/2_extract-job-skills)
 
 ### 🔷 Part 3: Measure AI demand exposure using extracted tasks 
+I measure AI demand exposure for each job task, how susceptible job tasks listed in new postings are to augmentation or replacement by AI
+
+Check out [here](https://github.com/yukyungkoh/job-postings-data-project/tree/main/3_measure-AI-demand-exposure)
