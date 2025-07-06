@@ -6,6 +6,7 @@ This repository contains a collection of Jupyter notebooks and scripts aimed at 
 
 - Access to real job posting data from platforms like LinkedIn is limited due to licensing restrictions and proprietary constraints.
 - **Synthetic job postings** generated with LLMs offer a practical alternative: they are safe to use, fully customizable, and scalable—making them ideal for experimentation and learning.
+- **Important Note:** Because this project relies on synthetic data, the results should **not** be interpreted as reflective of the real job market. The focus is on demonstrating how different techniques can be applied to job posting data in principle.
 - You can explore how I generated the synthetic data in [this folder](https://github.com/yukyungkoh/job-postings-data-project/tree/main/0_generate-synthetic-job-postings).
 
 The remainder of the project is organized into the following parts:
