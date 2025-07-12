@@ -11,8 +11,8 @@ This repository contains a collection of Jupyter notebooks and scripts aimed at 
 
 The remainder of the project is organized into the following parts:
 
-## 🔷 Part 1: Categorize Job Titles  
-This section explores multiple NLP approaches for classifying job titles into categories, including:
+## 🔷 Part 1: Categorize Jobs 
+This section explores multiple NLP approaches for classifying jobs into categories, including:
 - Rule-based methods
 - Supervised learning (e.g., logistic regression, Naive Bayes)
 - Unsupervised learning (e.g., k-means clustering, LDA topic modeling)
