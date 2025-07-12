@@ -1,6 +1,6 @@
-# Part 1: Categorize Job Titles
+# Part 1: Categorize Jobs
 
-This part of the project explores multiple approaches to classify job titles extracted from job postings into broader occupational categories. Job title classification is a key step in analyzing the labor market. 
+This part of the project explores multiple approaches to classify jobs extracted from job postings into broader occupational categories. Job classification is a key step in analyzing the labor market. 
 
 Although job category labels are known by design -- assigned during the LLM-based generation of synthetic job postings ([details here](https://github.com/yukyungkoh/job-postings-data-project/tree/main/0_generate-synthetic-job-postings)) -- they are treated as unknown here to demonstrate how the classification techniques can be applied in practice. 
 
@@ -22,7 +22,7 @@ This method relies on manually defined patterns (e.g., keywords or regular expre
 
 ## 2: Supervised Learning
 
-I train machine learning classifiers (e.g., logistic regression, Naive Bayes) on labeled examples of job titles to predict categories.
+I train machine learning classifiers (e.g., logistic regression, Naive Bayes) on labeled examples of jobs to predict categories based on job posting contents.
 
 **✅ Advantages:**
 - More flexible than rule-based approaches
@@ -34,7 +34,7 @@ I train machine learning classifiers (e.g., logistic regression, Naive Bayes) on
 
 ## 3: Unsupervised Learning
 
-I use clustering and topic modeling (e.g., k-means, LDA) to group similar job titles without predefined labels.
+I use clustering and topic modeling (e.g., k-means, LDA) to group similar jobs without predefined labels, again using job posting contents.
 
 **✅ Advantages:**
 - No need for labeled data
