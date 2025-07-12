@@ -17,7 +17,7 @@ This section explores multiple NLP approaches for classifying jobs into categori
 - Supervised learning (e.g., logistic regression, Naive Bayes)
 - Unsupervised learning (e.g., k-means clustering, LDA topic modeling)
 
-[Browse the notebook folder for Part 1](https://github.com/yukyungkoh/job-postings-data-project/tree/main/1_categorize-job-titles)
+[Browse the notebook folder for Part 1](https://github.com/yukyungkoh/job-postings-data-project/tree/main/1_categorize-jobs)
 
 
 ## 🔷 Part 2: Extract Job Skills and Tasks  
