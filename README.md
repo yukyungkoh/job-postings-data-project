@@ -20,12 +20,12 @@ This section explores multiple NLP approaches for classifying jobs into categori
 [Browse the notebook folder for Part 1](https://github.com/yukyungkoh/job-postings-data-project/tree/main/1_categorize-jobs)
 
 
-## 🔷 Part 2: Extract Job Skills and Tasks  
+## 🔷 Part 2: Extract Job Skills 
 This section focuses on extracting job skills and task descriptions from job posting text using:
 - Keyword matching to a curated skill list (from Lightcast)
-- Large language models (LLMs)
+- Large language models (LLMs), combined with Embedding + Clustering
 
-[Browse the notebook folder for Part 2](https://github.com/yukyungkoh/job-postings-data-project/tree/main/2_extract-job-skills-and-tasks)
+[Browse the notebook folder for Part 2](https://github.com/yukyungkoh/job-postings-data-project/tree/main/2_extract-job-skills)
 
 
 ## 🔷 Part 3: Measure AI Demand Exposure  
