@@ -15,12 +15,12 @@ OPENAI_API_KEY = "sk-proj-9heQjwcNWDs0rn3RXwuDdqP2m3t_mi7bkQtCdD2s80rP2KsGY1HUxX
 # ---------------------------------------------------
 # 2. Define number of postings, trial number, etc.
 # ---------------------------------------------------
-n_trial = 5
+n_trial = 1
     # Due to OpenAI's daily request limits, it's not feasible to generate a large dataset
     # (e.g., 100,000 postings) in a single run. Instead, this script is executed daily
     # to generate a batch of 2,000 job postings at a time.
 
-n_posting = 2000
+n_posting = 5000
 
 # ----------------------------
 # 3. Generate job sectors

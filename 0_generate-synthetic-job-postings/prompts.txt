@@ -16,6 +16,11 @@
             - Mid-level: 2–5 years experience, moderate complexity.
             - Senior-level: leadership, decision-making, advanced qualifications.
         - Vary the format: mix bullet points and paragraphs.
+	- Vary the opening sentence structure. Avoid repeating phrases like "We are seeking" or "We are looking for." Use a mix of tones and openings, such as:
+  		- Describe the team or mission first.
+  		- Begin with a bold statement or challenge ("Ready to shape the future of...?")
+  		- Start with a benefit, opportunity, or company vision.
+ 		 - Use varied verbs (e.g., "Join", "Collaborate", "Help lead", "Support", "Drive", etc.).
         - Include responsibilities, qualifications, and location.
         - Randomly include or exclude DEI language and benefits.
         - {pay_note}
