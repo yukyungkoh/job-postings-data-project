@@ -3,7 +3,7 @@ import glob
 import os
 
 # Set the directory where your CSV files are stored
-data_dir = "data"
+data_dir = "../data"
 output_file = os.path.join(data_dir, "synthetic_job_postings_combined.csv")
 
 # Get all matching CSV files
