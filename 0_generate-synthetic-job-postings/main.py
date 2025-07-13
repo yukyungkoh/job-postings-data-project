@@ -9,13 +9,12 @@ import aiohttp
 # ----------------------------
 # 1. Set up your API key
 # ----------------------------
-OPENAI_API_KEY = "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"
-#OPENAI_API_KEY = "(your API here!)"
+OPENAI_API_KEY = "(your API here!)"
 
 # ---------------------------------------------------
 # 2. Define number of postings, trial number, etc.
 # ---------------------------------------------------
-n_trial = 1
+n_trial = 2
     # Due to OpenAI's daily request limits, it's not feasible to generate a large dataset
     # (e.g., 100,000 postings) in a single run. Instead, this script is executed daily
     # to generate a batch of 2,000 job postings at a time.
@@ -40,44 +39,47 @@ def build_prompt(sector):
     pay_note = "Include a realistic pay range if appropriate." if include_pay else "Do not mention pay."
 
     prompt = f"""
-             Generate a realistic and varied U.S. job title for a role in the {sector} sector.
-             Then write a corresponding online job posting.
+            Generate a realistic and varied U.S. job title for a role in the {sector} sector.
+    	    For example, in the "{sector}" sector, consider a wide range of job types—e.g., client-facing, operational, strategy, support, compliance, leadership, and technical roles.
+            Then write a corresponding online job posting.
 
-             **Job Title Instructions**:
-             - Vary the actual seniority level of the role (entry-level, mid-level, senior-level).
-             - Most titles should **not** have seniority indicator. Many should just say things like "Data Analyst" or "Marketing Manager".
-             - But for **few** titles, include seniority indicator (e.g., "Mid-Level", "Senior", "Sr.", "Junior", "Jr."), but most titles should not have it.
-             - Vary structure and formatting: include tools, certifications, or location (e.g., "Remote", "Hybrid") **occasionally**, not always.
-             - Use a mix of clean, formal titles and messier, casual, or acronym-heavy titles to simulate real-world postings on LinkedIn or Indeed.
+            **Job Title Instructions**:
+            - Most titles should **not** have seniority indicator. Many should just say things like "Data Analyst" or "Marketing Manager".
+            - Vary structure and formatting: include tools, certifications, or location (e.g., "Remote", "Hybrid") **occasionally**, not always.
+            - Use a mix of clean, formal titles and messier, casual, or acronym-heavy titles to simulate real-world postings on LinkedIn or Indeed.
+    	    - Cover a wide range of functional areas within the sector. For example:
+        		- In **finance**, don't just generate analyst roles—include investment banking, private equity, compliance, treasury, portfolio management, FP&A, controller, and client-facing finance roles.
+       		     - In **software engineering**, vary between front-end, back-end, DevOps, infrastructure, QA, and managerial positions.
+       		     - In **marketing**, include brand, growth, digital, product marketing, PR, and communications roles.
+    	    Examples of varied titles in the {sector} sector might include:
+    		  - Finance: Investment Banking Associate, M&A Analyst, Financial Analyst, Wealth Strategy Consultant, Financial Modeling Lead
+    		  - Data Science: Data Scientist, AI Research Associate, ML Ops Engineer, Data Strategy Consultant, Predictive Analytics Specialist
+    		  - Software Engineering: Software Engineer, SDE, SDE II, Software Development Manager
 
-             **Job Posting Instructions**:
-             - Ensure the posting matches the implied seniority of the job title:
-                 - Entry-level: simple duties, minimal requirements.
-                 - Mid-level: 2–5 years experience, moderate complexity.
-                 - Senior-level: leadership, decision-making, advanced qualifications.
-             - Write everything as full sentences and paragraphs. No bullet points. 
-    	     - Vary the opening sentence structure. Avoid repeating phrases like "We are seeking" or "We are looking for." Use a mix of tones and openings, such as:
-                - Describe the team or mission first.
-                - Begin with a bold statement or challenge ("Ready to shape the future of...?")
-                - Start with a benefit, opportunity, or company vision.
-                - Use varied verbs (e.g., "Join", "Collaborate", "Help lead", "Support", "Drive", etc.).
-             - Include responsibilities, basic qualifications, preferred qualifications, and location. 
-             - Randomly include or exclude DEI language and benefits.
-             - {pay_note}
-             - Introduce light "real-world noise": occasional grammatical quirks, inconsistent punctuation, typos, or abbreviation use (e.g., "exp." for experience, "req." for requirements). Not in every post — just enough to make the data look realistic.
-             - Do not explicitly repeat the job title or sector name within the job description body. Instead, describe tasks and qualifications more naturally.
+            **Job Posting Instructions**:
+            - Vary the format: mix bullet points and paragraphs.
+    	    - Vary the opening sentence structure. Avoid repeating phrases like "We are seeking" or "We are looking for." Use a mix of tones and openings, such as:
+      		   - Describe the team or mission first.
+      		   - Begin with a bold statement or challenge ("Ready to shape the future of...?")
+      		   - Start with a benefit, opportunity, or company vision.
+     		   - Use varied verbs (e.g., "Join", "Collaborate", "Help lead", "Support", "Drive", etc.).
+            - Include responsibilities, qualifications, and location.
+            - Randomly include or exclude DEI language and benefits.
+            - {pay_note}
+            - Introduce light "real-world noise": occasional grammatical quirks, inconsistent punctuation, typos, or abbreviation use (e.g., "exp." for experience, "req." for requirements). Not in every post — just enough to make the data look realistic.
+            - Do not explicitly repeat the job title or sector name within the job description body. Instead, describe tasks and qualifications more naturally.
 
-             **Format**:
-             ### Job Title
-             <your job title>
+            **Format**:
+            ### Job Title
+            <your job title>
 
-             ### Job Posting
-             <your posting>
+            ### Job Posting
+            <your posting>
 
-             **Instruction for format**
-             Only use the ### Job Title and ### Job Posting headers once — at the top. 
-             Do not repeat them or include any footer text.
-             """.strip()
+            **Instruction for format**
+            Only use the ### Job Title and ### Job Posting headers once — at the top. 
+            Do not repeat them or include any footer text.
+            """.strip()
 
     return prompt.strip()
 
@@ -93,7 +95,14 @@ async def generate_posting(session, sector, retries=3):
     data = {
         "model": "gpt-4o-mini",
         "messages": [
-            {"role": "system", "content": "You are a recruiter generating synthetic job titles and realistic job postings for the U.S. market."},
+            {
+                "role": "system",
+                "content": (
+                    "You are a recruiter generating synthetic U.S. job postings across varied roles within each job sector, "
+                    "simulating the diversity found on real job boards like LinkedIn or Indeed. "
+                    "Your outputs should reflect different job types, seniority levels, and tone variations commonly seen online."
+                )
+            },
             {"role": "user", "content": prompt}
         ],
         "temperature": round(random.uniform(0.5, 0.8), 2),
