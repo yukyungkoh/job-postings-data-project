@@ -23,7 +23,6 @@ This section explores multiple NLP approaches for classifying jobs into categori
 ## 🔷 Part 2: Extract Job Skills and Tasks  
 This section focuses on extracting job skills and task descriptions from job posting text using:
 - Keyword matching to a curated skill list (from Lightcast)
-- Sentence embeddings
 - Large language models (LLMs)
 
 [Browse the notebook folder for Part 2](https://github.com/yukyungkoh/job-postings-data-project/tree/main/2_extract-job-skills-and-tasks)
