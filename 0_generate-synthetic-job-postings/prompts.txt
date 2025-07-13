@@ -41,45 +41,8 @@
 
 
 
+
 % ================ Version 2 (Paragraph ver) ====================== %
-    prompt = f"""
-         Generate a realistic and varied U.S. job title for a role in the {sector} sector.
-         Then write a corresponding online job posting.
-
-         **Job Title Instructions**:
-         - Vary the actual seniority level of the role (entry-level, mid-level, senior-level).
-         - Most titles should **not** have seniority indicator. Many should just say things like "Data Analyst" or "Marketing Manager".
-         - But for **few** titles, include seniority indicator (e.g., "Mid-Level", "Senior", "Sr.", "Junior", "Jr."), but most titles should not have it.
-         - Vary structure and formatting: include tools, certifications, or location (e.g., "Remote", "Hybrid") **occasionally**, not always.
-         - Use a mix of clean, formal titles and messier, casual, or acronym-heavy titles to simulate real-world postings on LinkedIn or Indeed.
-
-         **Job Posting Instructions**:
-         - Ensure the posting matches the implied seniority of the job title:
-             - Entry-level: simple duties, minimal requirements.
-             - Mid-level: 2–5 years experience, moderate complexity.
-             - Senior-level: leadership, decision-making, advanced qualifications.
-         - Write everything as full sentences and paragraphs. No bullet points. 
-         - Include responsibilities, qualifications, and location. Include them as full sentences and paragraphs, not as bullet points. 
-         - Randomly include or exclude DEI language and benefits.
-         - {pay_note}
-         - Introduce light "real-world noise": occasional grammatical quirks, inconsistent punctuation, typos, or abbreviation use (e.g., "exp." for experience, "req." for requirements). Not in every post — just enough to make the data look realistic.
-         - Do not explicitly repeat the job title or sector name within the job description body. Instead, describe tasks and qualifications more naturally.
-
-         **Format**:
-         ### Job Title
-         <your job title>
-
-         ### Job Posting
-         <your posting>
-
-         **Instruction for format**
-         Only use the ### Job Title and ### Job Posting headers once — at the top. 
-         Do not repeat them or include any footer text.
-         """.strip()
-
-
-
-% ================ Version 3 (Paragraph ver) ====================== %
     prompt = f"""
          Generate a realistic and varied U.S. job title for a role in the {sector} sector.
          Then write a corresponding online job posting.
