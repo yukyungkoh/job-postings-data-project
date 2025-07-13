@@ -6,8 +6,11 @@ import os
 data_dir = "../data"
 output_file = os.path.join(data_dir, "synthetic_job_postings_combined.csv")
 
+print("All CSVs in directory:")
+print(glob.glob(os.path.join(data_dir, "*.csv")))
+
 # Get all matching CSV files
-csv_files = sorted(glob.glob(os.path.join(data_dir, "synthetic_job_posting_*.csv")))
+csv_files = sorted(glob.glob(os.path.join(data_dir, "synthetic_job_postings_*.csv")))
 
 # Exclude the combined file if it already exists
 csv_files = [f for f in csv_files if not f.endswith("synthetic_job_postings_combined.csv")]
