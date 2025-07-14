@@ -12,7 +12,7 @@ Below are the steps to construct the AI Demand Exposure Score.
 - Task extraction using LLMs is **time-consuming** (e.g., ~5 hours for 2,000 postings).
 - To scale to **millions of postings**, we need a more efficient approach.
 
-### ✅ Alternative: Rule-Based and ML-Based Task Parsing (No LLM)
+### ✅ Alternative: Rule-Based and ML-Based Task Parsing (No LLM) - Future To-Do
 Alternative methods for task extraction include :
 
 * **Section-based parsing**  
@@ -25,7 +25,6 @@ Alternative methods for task extraction include :
 * **Sentence-level classification**  
    - Use a classifier trained on LLM-labeled training data to identify whether a sentence describes a task.
 
-This is one of my future to-do's. 
 
 ## 2: Map tasks to a taxonomy 
 * Auto-cluster the extracted tasks, using sentence embeddings and clustering
