@@ -13,7 +13,7 @@ Below are the steps to construct the AI Demand Exposure Score.
 - To scale to **millions of postings**, we need a more efficient approach.
 
 #### ✅ Alternative: Rule-Based and ML-Based Task Parsing (No LLM) - Future To-Do
-Alternative methods for task extraction include :
+Alternative methods for task extraction include:
 
 * **Section-based parsing**  
    - Use regex to extract content under headers like "Responsibilities", "Duties", "Tasks".
