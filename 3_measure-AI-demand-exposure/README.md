@@ -8,11 +8,11 @@ Below are the steps to construct the AI Demand Exposure Score.
 * I use a **large language model** (specifically, Mistral via Ollama) to extract concise task statements from the job descriptions.
 * Tasks should be action-oriented and exclude qualifications, benefits, or company information.
 
-### ⚠️ Caveats
+#### ⚠️ Caveats
 - Task extraction using LLMs is **time-consuming** (e.g., ~5 hours for 2,000 postings).
 - To scale to **millions of postings**, we need a more efficient approach.
 
-### ✅ Alternative: Rule-Based and ML-Based Task Parsing (No LLM) - Future To-Do
+#### ✅ Alternative: Rule-Based and ML-Based Task Parsing (No LLM) - Future To-Do
 Alternative methods for task extraction include :
 
 * **Section-based parsing**  
