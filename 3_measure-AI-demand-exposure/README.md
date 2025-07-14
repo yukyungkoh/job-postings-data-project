@@ -5,7 +5,7 @@ This part of the project measures how susceptible job tasks listed in new postin
 Below are the steps to construct the AI Demand Exposure Score. 
 
 ## 1: Extract tasks from job postings 
-* Use a **large language model** (here, Mistral via Ollama) to extract concise task statements from the job descriptions.
+* I use a **large language model** (specifically, Mistral via Ollama) to extract concise task statements from the job descriptions.
 * Tasks should be action-oriented and exclude qualifications, benefits, or company information.
 
 #### ⚠️ Caveats
@@ -13,16 +13,16 @@ Below are the steps to construct the AI Demand Exposure Score.
 - To scale to **millions of postings**, we need a more efficient approach.
 
 #### ✅ Alternative: Rule-Based and ML-Based Task Parsing (No LLM)
-Consider using:
+Alternative methods for task extraction include :
 
-1. **Section-based parsing**  
+* **Section-based parsing**  
    - Use regex to extract content under headers like "Responsibilities", "Duties", "Tasks".
    
-2. **Sentence segmentation and filtering**  
+* **Sentence segmentation and filtering**  
    - Split into sentences or bullet points using `nltk` or `spaCy`.  
    - Filter likely tasks using rules (e.g., starts with a verb) and a list of task-related verbs (from O*NET or curated sources).
 
-3. **Sentence-level classification**  
+* **Sentence-level classification**  
    - Use a classifier trained on LLM-labeled training data to identify whether a sentence describes a task.
 
 This is one of my future to-do's. 
