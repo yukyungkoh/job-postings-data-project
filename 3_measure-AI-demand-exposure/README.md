@@ -19,5 +19,7 @@ Below are the steps to construct the AI Demand Exposure Score.
   
 ## 4: Compute the AI Demand Exposure Score
 * Compute the score per job posting
-   $\text{AI Demand Exposure Score} = \frac{\text{\# of tasks in posting that are AI-exposed}}{\text{Total \# of tasks in posting}}$
+   $$
+       \text{AI Demand Exposure Score} = \frac{\text{\# of tasks in posting that are AI-exposed}}{\text{Total \# of tasks in posting}}
+   $$
   
