@@ -6,7 +6,7 @@ Although job category labels are known by design -- assigned during the LLM-base
 
 I implement three different methods, each documented in a separate Jupyter notebook within this folder.
 
-## 1: Rule-Based Classification (Regex Matching)
+## 1: Rule-Based Classification (Regex Matching) - Click [here](https://github.com/yukyungkoh/job-postings-data-project/blob/main/1_categorize-jobs/1_approach1-rule-based.ipynb)
 
 This method relies on manually defined patterns (e.g., keywords or regular expressions) to assign job titles to categories such as "Data-related", "Software Development", or "Finance".
 
@@ -20,7 +20,7 @@ This method relies on manually defined patterns (e.g., keywords or regular expre
 - Fragile to typos, variations, and edge cases
 - Requires manual tuning of rules
 
-## 2: Supervised Learning
+## 2: Supervised Learning - Click [here](https://github.com/yukyungkoh/job-postings-data-project/blob/main/1_categorize-jobs/2_approach2-supervised.ipynb)
 
 I train machine learning classifiers (e.g., logistic regression, Naive Bayes) on labeled examples of jobs to predict categories based on job posting contents.
 
@@ -32,7 +32,7 @@ I train machine learning classifiers (e.g., logistic regression, Naive Bayes) on
 - Requires labeled training data
 - May struggle with rare or ambiguous titles
 
-## 3: Unsupervised Learning
+## 3: Unsupervised Learning - Click [here](https://github.com/yukyungkoh/job-postings-data-project/blob/main/1_categorize-jobs/3_approach3-unsupervised.ipynb)
 
 I use clustering and topic modeling (e.g., k-means, LDA) to group similar jobs without predefined labels, again using job posting contents.
 
