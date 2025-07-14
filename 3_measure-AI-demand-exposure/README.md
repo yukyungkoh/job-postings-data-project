@@ -6,7 +6,6 @@ Below are the steps to construct the AI Demand Exposure Score.
 
 ## Step 1: Extract tasks from job postings 
 * Currently, I use a **large language model** (specifically, Mistral via Ollama) to extract task statements from the job descriptions.
-* Tasks should be action-oriented and exclude qualifications, benefits, or company information.
 
 #### ⚠️ Caveats
 - Task extraction using LLMs is **time-consuming** (e.g., ~5 hours for 2,000 postings).
