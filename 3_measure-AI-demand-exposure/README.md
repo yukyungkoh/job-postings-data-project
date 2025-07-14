@@ -17,6 +17,7 @@ Alternative methods for task extraction include:
 
 * **Section-based parsing**  
    - Use regex to extract content under headers like "Responsibilities", "Duties", "Tasks".
+   - Only works for job postings without clear headers
    
 * **Sentence segmentation and filtering**  
    - Split into sentences or bullet points using `nltk` or `spaCy`.  
