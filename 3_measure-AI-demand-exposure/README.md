@@ -4,7 +4,7 @@ This part of the project measures how susceptible job tasks listed in new postin
 
 Below are the steps to construct the AI Demand Exposure Score. 
 
-## 1: Extract tasks from job postings 
+## Step 1: Extract tasks from job postings 
 * I use a **large language model** (specifically, Mistral via Ollama) to extract concise task statements from the job descriptions.
 * Tasks should be action-oriented and exclude qualifications, benefits, or company information.
 
@@ -26,16 +26,16 @@ Alternative methods for task extraction include :
    - Use a classifier trained on LLM-labeled training data to identify whether a sentence describes a task.
 
 
-## 2: Map tasks to a taxonomy 
+## Step 2: Map tasks to a taxonomy 
 * Auto-cluster the extracted tasks, using sentence embeddings and clustering
 * Each cluster represents a generalized **activity type**.
 
-## 3: Classify Activities as AI-Augmentable or Not
+## Step 3: Classify Activities as AI-Augmentable or Not
 * Use GPT to label whether each activity is AI-exposed.
 * For example, ask:  
   *“Can this task be automated or enhanced by artificial intelligence?”*
   
-## 4: Compute the AI Demand Exposure Score
+## Step 4: Compute the AI Demand Exposure Score
 * Compute the score per job posting
 
 $$
