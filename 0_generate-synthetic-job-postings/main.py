@@ -9,7 +9,8 @@ import aiohttp
 # ----------------------------
 # 1. Set up your API key
 # ----------------------------
-OPENAI_API_KEY = "(your API here!)"
+OPENAI_API_KEY = "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"
+#OPENAI_API_KEY = "(your API here!)"
 
 # ---------------------------------------------------
 # 2. Define number of postings, trial number, etc.

@@ -26,7 +26,7 @@ Alternative methods for task extraction include:
    - Use a classifier trained on LLM-labeled training data to identify whether a sentence describes a task.
 
 
-## Step 2: Map tasks to a taxonomy 
+## Step 2: Map tasks to standardized activities 
 * Auto-cluster the extracted tasks, using sentence embeddings and clustering
 * Each cluster represents a generalized **activity type**.
 
