@@ -1,6 +1,6 @@
 # Part 3: Construct AI Demand Exposure for Job Tasks
 
-This part of the project measures how susceptible job tasks listed in new postings are to augmentation or replacement by AI (Called "AI Demand Exposure Score" in Revelio Labs' report "AI at Work: The State of AI Adoption in 2025") 
+This part of the project measures how susceptible job tasks listed in new postings are to augmentation or replacement by AI.
 
 Below are the steps to construct the AI Demand Exposure Score. 
 
