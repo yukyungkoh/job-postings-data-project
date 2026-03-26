@@ -1,4 +1,4 @@
-# Job Postings Data Project
+# Text-Based Labor Market Analysis using ML, NLP, and LLMs
 
 This repository contains a collection of Jupyter notebooks and scripts aimed at learning how to apply **natural language processing (NLP)** and **large language models (LLMs)** to extract structured insights from messy, unstructured **job postings**. Using **synthetic** data, the project explores methods for leveraging job posting data to analyze the labor market. 
 
